@@ -1,0 +1,13 @@
+package numerosAleatorios;
+/*
+ * Programa para explicar la formacion de numeors aleatorios
+ */
+public class NumerosAleatorios {
+
+	public static void main(String[] args) {
+		double n=Math.random();
+		//math random devuelve un numero double entre 0.00000.... y 0.999999....
+		System.out.println((int) n *10);
+		System.out.println(0.99999*2);
+	}
+}

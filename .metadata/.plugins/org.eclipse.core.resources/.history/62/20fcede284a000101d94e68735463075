@@ -1,0 +1,20 @@
+package bucles;
+/*
+ * Carlos Abraham Chavarri Valera
+ * fecha:3/10/2025
+ * Es un Ejercicio para explicar while
+ */
+public class EjemploWhile {
+
+	public static void main(String[] args) {
+		// Declarar variables
+		int numero=6;
+		//while en el que no se entra
+		System.out.println("Antes del bucle");
+		while (numero<0) {
+			System.out.println("Dentro del bucle");
+		}
+		System.out.println("Fuera del bucle");
+	}
+
+}

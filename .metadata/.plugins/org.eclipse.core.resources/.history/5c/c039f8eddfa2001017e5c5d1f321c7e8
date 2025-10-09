@@ -1,0 +1,10 @@
+package bucles;
+import java.nio.file.*;
+public class ifs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Files.deleteIfExists(Paths.get("C:/Users/AluDAM/Documents/Nueva")); 
+		}
+
+}

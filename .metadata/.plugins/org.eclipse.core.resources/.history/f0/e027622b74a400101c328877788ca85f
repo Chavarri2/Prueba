@@ -1,0 +1,14 @@
+
+public class Ejercicio4 {
+	/*
+	 *Carlos Abraham Chavarri Valera 
+	 * 8/10/2025
+	 * Escribir un programa que una vez que lea un número n por teclado calcule y escriba
+	 * sus divisores por la pantalla
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package bucles;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.*;
+public class ifs {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		Files.deleteIfExists(Paths.get("C:/Users/AluDAM/Documents/prueba2")); 
+		FileUtils.deleteQuietly(new File("C:/Users/AluDAM/Documents/prueba"));
+	}
+
+}
