@@ -1,4 +1,7 @@
 package ejercicios;
+
+import java.util.Scanner;
+
 /**
  * @author Carlos Abraham Chavarri Valera
  * @version
@@ -15,8 +18,12 @@ package ejercicios;
 public class Ejercicio13 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		//Creamos objeto de la clase Scanner
+		Scanner teclado=new Scanner (System.in);
+		
+		
+		//Cerramos objeto de la clase Scanner
+		teclado.close();
 	}
 	
 	public static boolean esBisiesto(int anio) {
