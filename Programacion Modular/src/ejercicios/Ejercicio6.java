@@ -29,8 +29,13 @@ public class Ejercicio6 {
 		teoria=teclado.nextDouble();
 		System.out.println("Introduce la nota de la practica");
 		practica=teclado.nextDouble();
-		System.out.printf(" %2d",calcularNotaFinal(teoria, practica));
-		
+		if(calcularNotaFinal(teoria, practica)>=5 && puedeHacerMedia(teoria, practica)) {
+			System.out.printf("Aprobado con un %.2f",calcularNotaFinal(teoria, practica));
+		}else if(calcularNotaFinal(teoria, practica)>=4 && puedeHacerMedia(teoria, practica)) {
+			System.out.printf("Suspenso con un %.2f",calcularNotaFinal(teoria, practica));
+		}else {
+			System.out.println("Necesitas al menos un 4 en cada parte");
+		}
 		//System.out.println(puedeHacerMedia(teoria, practica));
 		//System.out.println(estaAprobado(teoria, practica));
 		//Cerramos objeto de la clase Scanner
