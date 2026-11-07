@@ -1,6 +1,5 @@
 package ejercicioString;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -22,62 +21,35 @@ public class Ejercicio8 {
 		System.out.println("Introduce una palabra");
 		palabra=teclado.nextLine();
 		//LLamamos objeto de la clase Scanner
-		vocalMasUsado(palabra);
+		System.out.println(vocalMasUsado(palabra));
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
-	public static int vocalA(String palabra) {
-		int contador=0;
+	public static String vocalMasUsado(String palabra) {
+		int contadorA=0, contadorE=0,contadorI=0, contadorO=0, contadorU=0;
 		for (int i = 0; i < palabra.length(); i++) {
 			if(palabra.charAt(i)=='a') {
-
+				contadorA++;
+			}else if(palabra.charAt(i)=='e') {
+				contadorE++;
+			}else if(palabra.charAt(i)=='i') {
+				contadorI++;
+			}else if(palabra.charAt(i)=='o') {
+				contadorO++;
+			}else if(palabra.charAt(i)=='u') {
+				contadorU++;
 			}
 		}
-		return contador;
-	}
-	
-	public static int vocalE(String palabra) {
-		int contador=0;
-		for (int i = 0; i < palabra.length(); i++) {
-			if(palabra.charAt(i)=='a') {
-
-			}
-		}
-		return contador;
-	}
-	
-	public static int vocalI(String palabra) {
-		int contador=0;
-		for (int i = 0; i < palabra.length(); i++) {
-			if(palabra.charAt(i)=='a') {
-
-			}
-		}
-		return contador;
-	}
-	
-	public static int vocalO(String palabra) {
-		int contador=0;
-		for (int i = 0; i < palabra.length(); i++) {
-			if(palabra.charAt(i)=='a') {
-
-			}
-		}
-		return contador;
-	}
-	
-	public static int vocalU(String palabra) {
-		int contador=0;
-		for (int i = 0; i < palabra.length(); i++) {
-			if(palabra.charAt(i)=='a') {
-				
-			}
-		}
-		return contador;
-	}
-	public static void vocalMasUsado(String palabra) {
-		if(vocalA(palabra)>vocalA(palabra)) {
-			
+		if(contadorA>contadorE && contadorA>contadorI && contadorA>contadorO && contadorA>contadorU) {
+			return "La vocal que aparece mas veces es: A con "+contadorA+" apariciones";
+		}else if(contadorE>contadorI && contadorE>contadorO && contadorE>contadorU) {
+			return "La vocal que aparece mas veces es: E con "+contadorE+" apariciones";
+		}else if(contadorI>contadorO && contadorI>contadorU) {
+			return "La vocal que aparece mas veces es: I con "+contadorI+" apariciones";
+		}else if(contadorO>contadorU){
+			return "La vocal que aparece mas veces es: O con "+contadorO+" apariciones";
+		}else {
+			return "La vocal que aparece mas veces es: U con "+contadorU+" apariciones";
 		}
 	}
 }
