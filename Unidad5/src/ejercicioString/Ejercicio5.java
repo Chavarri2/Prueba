@@ -34,18 +34,8 @@ public class Ejercicio5 {
 		teclado.close();
 	}
 	public static void cambiarApellidos(String nombreApellido1, String nombreApellido2) {
-		int separador;
-		String nombre1, apellido1, nombre2, apellido2;
-		//Operaciones
-				separador=nombreApellido1.indexOf(" ")+1;
-				nombre1=nombreApellido1.substring(0, separador);
-				apellido1=nombreApellido1.substring(separador, nombreApellido1.length());
-				
-				separador=nombreApellido2.indexOf(" ")+1;
-				nombre2=nombreApellido2.substring(0, separador);
-				apellido2=nombreApellido2.substring(separador, nombreApellido2.length());
-				
-				System.out.println(nombre1+apellido2);
-				System.out.println(nombre2+apellido1);
+		String [] arreglo1= nombreApellido1.split(" "), arreglo2= nombreApellido2.split(" ");
+		System.out.println(arreglo1[0]+" "+arreglo2[1]);
+		System.out.println(arreglo2[0]+" "+arreglo1[1]);
 	}
 }

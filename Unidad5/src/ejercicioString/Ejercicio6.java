@@ -18,23 +18,17 @@ public class Ejercicio6 {
 		//Salida y entrada de datos
 		System.out.println("Introduce una palabra");
 		palabra=teclado.nextLine();
-		palabraCambioLetras(palabra);
+		System.out.println(palabraCambioLetras(palabra));
 		
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
 
-	public static void palabraCambioLetras(String palabra) {
-		System.out.println();
-		for (int i = 0; i < palabra.length(); i++) {
-			if(i==0) {
-				System.out.print(palabra.charAt(palabra.length()-1));
-			}else if(i==palabra.length()-1) {
-				System.out.print(palabra.charAt(0));
-			}else {
-				System.out.print(palabra.charAt(i));
-			}
+	public static String palabraCambioLetras(String palabra) {
+		if(palabra.length()>1) {
+			return palabra.charAt(palabra.length()-1)+palabra.substring(1, palabra.length()-1)+palabra.charAt(0);
+		}else {
+			return palabra;
 		}
-		System.out.println();
 	}
 }
