@@ -16,11 +16,36 @@ public class Ejercicio11 {
 	public static void main(String[] args) {
 		//Creamos objeto de la clase Scanner
 		Scanner teclado=new Scanner(System.in);
-		
-		
-		
+		//Declaramos variables
+		String dni, expreg="[0-9]{8}[A-Z]";
+		int numero;
+		//Salida y entrada de datos
+		do {
+			System.out.println("Introduce un dni");
+			dni=teclado.nextLine();
+		}while(!(dni.matches(expreg)));
+		numero= Integer.valueOf(dni.substring(0, dni.length()-1));
+		dni = dni.toUpperCase();
+		if(validarLetra(numero, dni)) {
+			System.out.println("El DNI "+dni+" es valido");
+		}else {
+			System.out.println("El DNI "+dni+" no es valido");
+		}
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
 
+	//Metodo para asignar letra de DNI
+	public static boolean validarLetra(long numeros, String dni) {
+		int numero=(int) (numeros%23);
+		char letra;
+		String letrasAsignables="TRWAGMYFPDXBNJZSQVHLCKE";
+		
+		letra=letrasAsignables.charAt(numero);
+		if(dni.charAt(dni.length()-1)==letra) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }

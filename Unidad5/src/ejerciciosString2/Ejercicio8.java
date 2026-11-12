@@ -1,4 +1,7 @@
 package ejerciciosString2;
+
+import java.util.Scanner;
+
 /**
  * @author Carlos Abraham Chavarri Valera
  * @version 1.0
@@ -11,8 +14,14 @@ package ejerciciosString2;
 public class Ejercicio8 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		//Creamos objeto de la clase Scanner
+		Scanner teclado=new Scanner(System.in);
+		
+		
+		
+		
+		//Cerramos objeto de la clase Scanner
+		teclado.close();
 	}
-
+	
 }
