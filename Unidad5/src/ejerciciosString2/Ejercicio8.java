@@ -16,12 +16,23 @@ public class Ejercicio8 {
 	public static void main(String[] args) {
 		//Creamos objeto de la clase Scanner
 		Scanner teclado=new Scanner(System.in);
-		
-		
-		
+		//Declaramos variables
+		String frase="", fraseCifrada;
+		int llave=0, numeroLetraCifrada;
+		System.out.println("Introduce una frase ");
+		frase=teclado.nextLine();
+		System.out.println("Introduce la llave del cifrado");
+		llave=teclado.nextInt();
+		numeroLetraCifrada=(llave+1)%27;
+		System.out.println(numeroLetraCifrada);
 		
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
 	
+	public static StringBuilder cifradoCesar(String frase) {
+		StringBuilder fraseCifrada=new StringBuilder();
+		
+		return fraseCifrada;
+	}
 }

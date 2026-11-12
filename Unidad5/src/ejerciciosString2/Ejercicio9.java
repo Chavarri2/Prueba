@@ -31,10 +31,10 @@ public class Ejercicio9 {
 				segundoCursoHombres=segundoCursoHombres+hombreSegundoCurso(persona);
 				segundoCursoMujeres=segundoCursoMujeres+mujeresSegundoCurso(persona);
 				numeroCodigosCorrectos++;
-			}else {
+			}else if(!(persona.equals("00000000"))){
 				System.out.println("\nCodigo no valido\n");
 			}
-		}while(persona.matches(expreg) || !(persona.equals("00000000")));
+		}while(!(persona.equals("00000000")));
 
 		System.out.println("Hay "+primerCursoHombres+" hombres cursando primero"
 				+ "\nHay "+primerCursoMujeres+" mujeres cursando primero"
