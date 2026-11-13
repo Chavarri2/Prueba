@@ -17,22 +17,30 @@ public class Ejercicio8 {
 		//Creamos objeto de la clase Scanner
 		Scanner teclado=new Scanner(System.in);
 		//Declaramos variables
-		String frase="", fraseCifrada;
-		int llave=0, numeroLetraCifrada;
+		String frase;
+		int clave;
 		System.out.println("Introduce una frase ");
 		frase=teclado.nextLine();
 		System.out.println("Introduce la llave del cifrado");
-		llave=teclado.nextInt();
-		numeroLetraCifrada=(llave+1)%27;
-		System.out.println(numeroLetraCifrada);
-		
+		clave=teclado.nextInt();
+		frase=frase.toUpperCase();
+		System.out.println(cifradoCesar(frase, clave));
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
 	
-	public static StringBuilder cifradoCesar(String frase) {
-		StringBuilder fraseCifrada=new StringBuilder();
-		
-		return fraseCifrada;
+	public static String cifradoCesar(String frase, int clave) {
+		String alfabeto="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		StringBuilder fraseCifrada= new StringBuilder();
+		for (int i = 0; i < frase.length(); i++) {
+			char letra= frase.charAt(i);
+			if(letra==' ') {
+				fraseCifrada.append(' ');
+			}else{
+				int posicion = (alfabeto.indexOf(letra) + clave) % alfabeto.length();
+	            fraseCifrada.append(alfabeto.charAt(posicion));
+			}
+		}
+		return fraseCifrada.toString();
 	}
 }
