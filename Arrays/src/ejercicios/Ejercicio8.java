@@ -28,6 +28,7 @@ public class Ejercicio8 {
 		System.out.println(listaNumeros1==listaNumeros2);
 		System.out.println(Arrays.equals(listaNumeros1, listaNumeros2));
 	}
+	//Metodo para copiar un array
 	public static int[] copiarArray(int[] lista) {
 		int[]copia= new int[lista.length];
 		for (int i = 0; i < copia.length; i++) {
