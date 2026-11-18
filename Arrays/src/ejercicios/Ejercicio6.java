@@ -1,5 +1,6 @@
 package ejercicios;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -15,22 +16,16 @@ public class Ejercicio6 {
 		//Creamos objeto de la clase Scanner
 		Scanner teclado=new Scanner(System.in);
 		//Declaramos e Inicializamos variables
-		boolean siNo=false;
-		int numero, posicion=0,contador=0;
-		int[] lista= {1,2,3,4,5,6,7,8,9};
+		int numero;
+		int[] lista= new int[20];
+		lista=rellenarArray(lista);
+		//Salida y entada de datos
 		System.out.println("Introduce un numero");
 		numero=teclado.nextInt();
-		
-		for (int i : lista) {
-			contador++;
-			if(i==numero) {
-				siNo=true;
-				posicion=contador;
-			}
-		}
-		if(siNo) {
+		System.out.println(Arrays.toString(lista));
+		if(estaNumero(numero, lista)) {
 			System.out.println("El numero esta en el array");
-			System.out.println("El numero "+numero+" esta en la posicion: "+posicion);
+			System.out.println("El numero "+numero+" esta en la posicion: "+posicionNumero(lista, numero));
 		}else {
 			System.out.println("El numero "+numero+" no esta en en el array");
 		}
@@ -38,5 +33,30 @@ public class Ejercicio6 {
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
-
+	//Metodo para rellenar un array
+	public static int[] rellenarArray(int[] lista) {
+		for (int i = 0; i < lista.length; i++) {
+			lista[i]=(int)(Math.random()*100+1);
+		}
+		return lista;
+	}
+	//Metodo para saber la posicion del numero
+	public static int posicionNumero(int[] lista, int numero) {
+		int posicion = 0;
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i]==numero) {
+				posicion= i;
+			}
+		}
+		return posicion;
+	}
+	//Metodo para comprobar que el numero esta en el array
+	public static boolean estaNumero(int numero, int[]lista) {
+		for (int i : lista) {
+			if(i==numero) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
