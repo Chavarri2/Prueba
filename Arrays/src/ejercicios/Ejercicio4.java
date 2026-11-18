@@ -34,7 +34,7 @@ public class Ejercicio4 {
 		System.out.printf("La nota media es: %.2f",media(listaNotas));
 		System.out.println("\nLa nota mas baja es: "+notaBaja(listaNotas));
 		System.out.println("La nota mas alta es: "+notaAlta(listaNotas));
-		
+
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
@@ -45,7 +45,7 @@ public class Ejercicio4 {
 		}
 		return notaMedia/notas.length;
 	}
-	
+
 	public static double notaAlta(double[] notas) {
 		double notaMasAlta=0;
 		for (double d : notas) {
@@ -55,7 +55,7 @@ public class Ejercicio4 {
 		}
 		return notaMasAlta;
 	}
-	
+
 	public static double notaBaja(double[] notas) {
 		double notaMasBaja=10;
 		for (double d : notas) {

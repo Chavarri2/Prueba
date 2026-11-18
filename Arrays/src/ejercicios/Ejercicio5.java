@@ -27,7 +27,7 @@ public class Ejercicio5 {
 		System.out.println("Hay "+par(listaNumeros)+" numeros pares");
 		System.out.println("Hay "+imPar(listaNumeros)+" numeros impares");
 		System.out.println("Hay "+mayoresMedia(listaNumeros)+" numeros mayores a la media");
-		
+
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
@@ -54,7 +54,7 @@ public class Ejercicio5 {
 		}
 		return numerosPares;
 	}
-	
+
 	public static int imPar(int[] lista) {
 		int numerosImPares=0;
 		for (int i : lista) {

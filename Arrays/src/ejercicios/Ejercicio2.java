@@ -15,8 +15,8 @@ public class Ejercicio2 {
 		for (String llave : listaDiasSamana) {
 			System.out.println(llave);
 		}
-		
-		
+
+
 	}
 
 }

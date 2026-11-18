@@ -18,7 +18,7 @@ public class Ejercicio6 {
 		//Declaramos e Inicializamos variables
 		int numero;
 		int[] lista= new int[20];
-		lista=rellenarArray(lista);
+		rellenarArray(lista);
 		//Salida y entada de datos
 		System.out.println("Introduce un numero");
 		numero=teclado.nextInt();
@@ -29,17 +29,18 @@ public class Ejercicio6 {
 		}else {
 			System.out.println("El numero "+numero+" no esta en en el array");
 		}
-		
+
 		//Cerramos objeto de la clase Scanner
 		teclado.close();
 	}
+	
 	//Metodo para rellenar un array
-	public static int[] rellenarArray(int[] lista) {
+	public static void rellenarArray(int[] lista) {
 		for (int i = 0; i < lista.length; i++) {
 			lista[i]=(int)(Math.random()*100+1);
 		}
-		return lista;
 	}
+	
 	//Metodo para saber la posicion del numero
 	public static int posicionNumero(int[] lista, int numero) {
 		int posicion = 0;
@@ -50,6 +51,7 @@ public class Ejercicio6 {
 		}
 		return posicion;
 	}
+	
 	//Metodo para comprobar que el numero esta en el array
 	public static boolean estaNumero(int numero, int[]lista) {
 		for (int i : lista) {

@@ -19,7 +19,7 @@ public class Ejercicio7 {
 		//Declaramos e Inicializamos variasbles
 		int numero;
 		int[] listaNumeros=new int[20];
-		listaNumeros=rellenarArray(listaNumeros);
+		rellenarArray(listaNumeros);
 		//Salida de datos
 		System.out.println(Arrays.toString(listaNumeros));
 		//Ordenamos el array
@@ -34,11 +34,9 @@ public class Ejercicio7 {
 	}
 
 	//Metodo para rellenar un array
-	public static int[] rellenarArray(int[] lista) {
+	public static void rellenarArray(int[] lista) {
 		for (int i = 0; i < lista.length; i++) {
 			lista[i]=(int)(Math.random()*100+1);
 		}
-		return lista;
 	}
-
 }

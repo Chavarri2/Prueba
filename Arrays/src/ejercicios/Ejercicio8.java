@@ -16,7 +16,7 @@ public class Ejercicio8 {
 	public static void main(String[] args) {
 		//Declaramos e inicializamos variables
 		int[] listaNumeros1=new int[10], listaNumeros2=new int[10];
-		listaNumeros1=rellenarArray(listaNumeros1);
+		rellenarArray(listaNumeros1);
 		listaNumeros2=copiarArray(listaNumeros1);
 		System.out.println(listaNumeros1==listaNumeros2);
 		System.out.println(Arrays.equals(listaNumeros1, listaNumeros2));
@@ -36,10 +36,9 @@ public class Ejercicio8 {
 		return copia;
 	}
 	//Metodo para rellenar un array
-		public static int[] rellenarArray(int[] lista) {
-			for (int i = 0; i < lista.length; i++) {
-				lista[i]=(int)(Math.random()*100+1);
-			}
-			return lista;
+	public static void rellenarArray(int[] lista) {
+		for (int i = 0; i < lista.length; i++) {
+			lista[i]=(int)(Math.random()*100+1);
 		}
+	}
 }
