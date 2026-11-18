@@ -1,7 +1,6 @@
 package ejercicios;
 
 import java.util.Arrays;
-import java.util.Iterator;
 
 /**
  * @author Carlos
@@ -34,17 +33,13 @@ public class Ejercicio16 {
 	}
 	
 	//Metodo para sumar columnas
-	public static int[] sumarColumnas(int[][] matriz) {
-		
-		int[] lista= new int[matriz[1].length];
-		
-		for (int i = 0; i < matriz.length; i++) {
-			
-				
-				lista[i]+=matriz[i][i];
-				
-			
-			
+	public static int[] sumarColumnas(int[][] matriz) {		
+		int[] lista= new int[matriz[0].length];
+		//Se pone para que recorrar la logitud de las columnas
+		for (int i = 0; i < matriz[0].length; i++) {
+			for (int j=0;j< matriz.length;j++) {
+				lista[i]+=matriz[j][i];
+			}
 		}
 		
 		return lista;
