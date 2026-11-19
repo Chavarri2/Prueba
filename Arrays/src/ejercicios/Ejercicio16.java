@@ -18,9 +18,9 @@ public class Ejercicio16 {
 		rellenarMatriz(matriz);
 		mostrarArrays(matriz);
 		System.out.println(Arrays.toString(sumarColumnas(matriz)));
-		
+
 	}
-	
+
 	//Metodo para sumar filas
 	public static int[] sumarFilas(int[][] matriz) {
 		int[]lista=new int[matriz.length];
@@ -31,7 +31,7 @@ public class Ejercicio16 {
 		}
 		return lista;
 	}
-	
+
 	//Metodo para sumar columnas
 	/*public static int[] sumarColumnas(int[][] matriz) {		
 		int[] lista= new int[matriz[0].length];
@@ -41,37 +41,37 @@ public class Ejercicio16 {
 				lista[i]+=matriz[j][i];
 			}
 		}
-		
+
 		return lista;
 	}*/
-	
+
 	public static int[] sumarColumnas(int[][] matriz) {		
 		int[] lista= new int[matriz[0].length];
-		
+
 		int contador=0;
 		int contador2=0;
-		
+
 		//Se pone para que recorrar la logitud de las columnas
 		for (int i = 0; i < matriz[0].length; i++) {
-			
+
 			if (i%matriz[0].length-1==0 && i>0) {
 				i=0;
 				contador++;
 			}
-				
+
 			if(contador>=matriz[0].length) {
 				contador=0;
 			}
-				
+
 			lista[contador]+=matriz[i][contador];
-			
+
 			contador2++;
-			
+
 			if (contador2==matriz[0].length*matriz.length) {
 				i=contador2;
 			}
 		}
-		
+
 		return lista;
 	}
 
