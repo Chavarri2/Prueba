@@ -14,9 +14,8 @@ public class Ejercicio14 {
 
 	public static void main(String[] args) {
 		//Declaramos variables
-		int[] lista= {1,2,1,1,1,1,1,3,2,2,2};
-				//new int[20];
-		//rellenarArray(lista);
+		int[] lista= new int[20];
+		rellenarArray(lista);
 		System.out.println(Arrays.toString(eliminarRepetidos(lista)));
 	}
 	

@@ -28,10 +28,12 @@ public class Ejercicio18 {
 	//Metodo para transponer matriz
 	public static int[][] trasponer(int[][]matriz) {
 		int[][] matrizTraspuesta=new int[matriz[0].length][matriz.length];
-		for (int i = 0; i < matrizTraspuesta.length; i++) {
-			for (int j = 0; j < matrizTraspuesta.length; j++) {
-				matrizTraspuesta[i][j]=matriz[j][i];
+		int contador=0;
+		while(contador<matriz.length) {
+			for (int i = 0; i < matriz[0].length; i++) {
+				matrizTraspuesta[i][contador]=matriz[contador][i];
 			}
+			contador++;
 		}
 		
 		return matrizTraspuesta;

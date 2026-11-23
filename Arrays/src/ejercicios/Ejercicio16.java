@@ -33,42 +33,12 @@ public class Ejercicio16 {
 	}
 
 	//Metodo para sumar columnas
-	/*public static int[] sumarColumnas(int[][] matriz) {		
+	public static int[] sumarColumnas(int[][] matriz) {		
 		int[] lista= new int[matriz[0].length];
 		//Se pone para que recorrar la logitud de las columnas
 		for (int i = 0; i < matriz[0].length; i++) {
 			for (int j=0;j< matriz.length;j++) {
 				lista[i]+=matriz[j][i];
-			}
-		}
-
-		return lista;
-	}*/
-
-	public static int[] sumarColumnas(int[][] matriz) {		
-		int[] lista= new int[matriz[0].length];
-
-		int contador=0;
-		int contador2=0;
-
-		//Se pone para que recorrar la logitud de las columnas
-		for (int i = 0; i < matriz[0].length; i++) {
-
-			if (i%matriz[0].length-1==0 && i>0) {
-				i=0;
-				contador++;
-			}
-
-			if(contador>=matriz[0].length) {
-				contador=0;
-			}
-
-			lista[contador]+=matriz[i][contador];
-
-			contador2++;
-
-			if (contador2==matriz[0].length*matriz.length) {
-				i=contador2;
 			}
 		}
 
