@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"ejercicioJuego","c":"SimuladorAzar","l":"SimuladorAzar()","u":"%3Cinit%3E()","k":"3"},{"p":"ejercicioJuego","c":"SimuladorAzar","l":"simularLanzamientos(int)"}];updateSearchResults();
