@@ -17,7 +17,6 @@ public class Estanteria {
 	 * @param categoria
 	 */
 	public Estanteria(int numeroBaldas, int librosPorBalda, String categoria) {
-		super();
 		this.numeroBaldas = numeroBaldas;
 		this.librosPorBalda = librosPorBalda;
 		this.categoria = categoria;
